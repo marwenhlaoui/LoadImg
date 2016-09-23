@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>loadImg</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/loadimg.min.css">
+</head>
+<body>
+	<div style="width:200px;">
+		<label id="upload">
+			<input type="file">
+		</label>
+	</div>
+	
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/loadimg.min.js"></script>
+	<script type="text/javascript">
+		$('#upload').loadImg({
+			"text"			: "Upload Picture here ...",
+			"fileExt"		: ["png","jpg"],
+			"fileSise_min"	: 0,
+			"fileSise_max"	: 2
+		});
+	</script>
+
+</body>
+</html>
