@@ -19,18 +19,12 @@
         var loader = $(el).append('<div class="loader"></div>');
         var img = $(el).append('<img>');
         var text = (typeof options.text === 'undefined') ? 'Upload' : options.text;
-        var init = function(){
-            
-           $(el).addClass("_cssimg");
-
-            $(el).attr("text-file",text);
-            /* load photo */
-            $(el).find('input[type=file]').on('change',function(){
-                $(el).find('.loader').show(); 
-                if((verifExt(this) != false)&&(verifSize(this) != false)){
-                    loadUrl(this);
-                }
-            });
+        var init = function(){ 
+           if ($(el).attr('exist-img')) {
+                _exist($(el).attr('exist-img'));
+           }else{
+                _ready();
+           }
            
         }
         var loadUrl = function(input){
@@ -93,6 +87,31 @@
             $(el).addClass("_cssimg");
             /*Invalid file type*/
            return false;
+        }
+        var _ready = function(){
+            $(el).addClass("_cssimg");
+
+            $(el).attr("text-file",text);
+            /* load photo */
+            $(el).find('input[type=file]').on('change',function(){
+                $(el).find('.loader').show(); 
+                if((verifExt(this) != false)&&(verifSize(this) != false)){
+                    loadUrl(this);
+                }
+            });
+        }
+        var _exist = function(url){ 
+
+            showImg(url);
+            $(el).attr("text-file",text);
+            /* load photo */
+            $(el).find('input[type=file]').on('change',function(){
+                $(el).removeAttr('exist-img');
+                $(el).find('.loader').show(); 
+                if((verifExt(this) != false)&&(verifSize(this) != false)){
+                    loadUrl(this);
+                }
+            });
         }
 
         init();

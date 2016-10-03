@@ -2,6 +2,11 @@
 #LoadImg
 ###Description : 
 LoadImg is JQuery function , you can load and preview picture before upload with ajax , php or any framework .
+
+
+----------
+
+
 ###Install : 
 easy to include in your application , just [download](https://github.com/marwenhlaoui/LoadImg/archive/master.zip) or clone from github
 
@@ -62,6 +67,13 @@ $('#upload').loadImg({
 });
 ```
 default values : min = 0 Mo and max = 2Mo
+If you want to use default picture just add `exist-img` attribut in lab 
+
+```html
+<label id="upload" exist-img="{ Url here }">
+	<input type="file" name="img"> 
+</label>
+```
 
 ### [Demo](http://app.loadimg.marwenhlaoui.me/)
 
