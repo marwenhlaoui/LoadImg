@@ -8,13 +8,13 @@ LoadImg is JQuery function , you can load and preview picture before upload with
 ----------
 
 
-###Install : 
+### Install : 
 easy to include in your application , just [download](https://github.com/marwenhlaoui/LoadImg/archive/master.zip) or clone from github
 
 ```git
 $git clone https://github.com/marwenhlaoui/LoadImg.git 
 ```
-###Include:
+### Include:
 add style file `loadimg.min.css` in head
 ```html
 <head>
@@ -32,7 +32,7 @@ add javascript  files `loadimg.min.js`  and `jquery.min.js`
 	<script src="assets/js/loadimg.min.js"></script>
 	...
 ```
-###Use : 
+### Use : 
 in your form
 ```html
 <label id="upload">
@@ -44,15 +44,15 @@ in your application js
 ```js
 $('#upload').loadImg({});
 ```
-###Optional parameters : 
-####Text : 
+### Optional parameters : 
+#### Text : 
 ```js
 $('#upload').loadImg({
 	"text"	: "Upload Picture ...",
 });
 ```
 default text: Upload
-####Image extension : 
+#### Image extension : 
 ```js
 $('#upload').loadImg({
 	"fileExt" : ["png","jpg"],
@@ -60,7 +60,7 @@ $('#upload').loadImg({
 ```
 default values : jpg
 
-####Image Size : 
+#### Image Size : 
 ```js
 $('#upload').loadImg({
 	"fileSize_min"	: 0,//0Mo
