@@ -1,6 +1,7 @@
 
-#LoadImg
-###Description : 
+# LoadImg
+
+### Description : 
 LoadImg is JQuery function , you can load and preview picture before upload with ajax , php or any framework .
 
 
